@@ -1,0 +1,76 @@
+// Inicialización de los estílos básicos del proyecto.
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-weight: 400;
+    color: rgb(30, 63, 63);
+    font-size: var(--font-size-body);
+    line-height: var(--line-height-body);
+    font-family: var(--font-family-body-alt);
+}
+
+// Reset <img>
+img {
+    width: 100%;
+    display: block;
+    max-width: 100%;
+}
+
+// Reset general etiquetas <h>
+h1,h2,h3,h4,h5,h6 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+h1 {
+    font-weight: 700;
+    color: rgb(56, 50, 50);
+    font-size: var(--font-size-h1);
+    line-height: var(--line-height-h1);
+    font-family: var(--font-family-h1-alt);
+    margin-bottom: var(--margin-bottom-h1);
+}
+
+h2 {
+    font-weight: 300;
+    line-height: 111%;
+    font-size: var(--font-size-h2);
+    font-family: var(--font-family-h2);
+}
+
+// h3 {
+//     font-family: var(--font-family-footer);
+// }
+
+// Reset <p>
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+
+// Reset <a>
+a {
+    color: darkblue;
+    text-decoration: none;
+}
+
+a,
+button {
+    outline: none;
+    cursor: var(--cursor-button);
+}
+
+// i {
+//     margin-right: .5rem;
+//     display: block;
+// }
+
+small {
+    font-size: var(--font-size-small);
+}

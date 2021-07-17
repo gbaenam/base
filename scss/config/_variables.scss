@@ -1,0 +1,188 @@
+
+// Breakpoints
+$breakpoints: (
+    medium: 540px,
+    xmedium: 640px,
+    xxmedium: 960px,
+    large: 1024px,
+    llarge: 1160px,
+    xlarge: 1280px,
+    xxlarge: 1440px,
+    zlarge: 1600px,
+    zzlarge: 1920px
+);
+
+
+// VARIABLES GLOBALES.
+
+// Variables de apilamiento - "z-index"
+:root {
+    --z-back: -10;
+    --z-normal: 1;
+    --z-tooltip: 10;
+    --z-fixed: 100;
+    --z-modal: 1000;
+}
+
+
+// Anchos y alturas.
+:root {
+    --min-width: 320px;
+    --max-width: 1200px;
+}
+
+
+// Familia de fuentes.
+:root {
+    // Font Family body
+    --font-family-body:'Roboto', sans-serif;
+    --font-family-body-alt: 'Bitter', serif;
+
+    // Font Family h1
+    --font-family-h1: 'Lato', sans-serif;
+    --font-family-h1-alt: 'Signika', sans-serif;
+
+    // Font Family h2
+    --font-family-h2: 'Lato', sans-serif;
+
+    // Font Family banner
+    --font-family-banner: 'Lato', sans-serif;
+
+    // Font Family banner-title
+    --font-family-banner-title: 'Open Sans', sans-serif;
+
+    // Font Family footer
+    --font-family-footer: 'Lato', sans-serif;
+}
+
+
+// Tamaños de fuentes.
+:root {
+    --font-size-h1: 48px;
+    --font-size-h2: 30px;
+    --font-size-body: 20px;
+    --font-size-small: 16px;
+
+    @include from(360px) {
+        --font-size-h1: 53px;
+    }
+
+    @include from(412px) {
+        --font-size-h1: 58px;
+        --font-size-h2: 34px;
+    }
+
+    @include from(480px) {
+        --font-size-body: 22px;
+    }
+
+    // 540px
+    @include from(medium) {
+        --font-size-small: 18px;
+    }
+
+    // 640px
+    @include from(xmedium) {
+        --font-size-h1: 64px;
+        --font-size-h2: 36px;
+    }
+
+    // 960px
+    @include from(xxmedium) {
+        --font-size-h1: 72px;
+    }
+
+    // 1280px
+    @include from(xlarge){
+        --font-size-h2: 39px;
+    }
+}
+
+
+// Altura de línea
+:root {
+    --line-height-h1: 48px;
+    --line-height-body: 28px;
+
+    @include from(412px) {
+        --line-height-h1: 60px;
+    }
+
+    @include from(480px) {
+        --line-height-body: 32px;
+    }
+}
+
+
+// h1 - Margen inferior
+:root {
+    --margin-bottom-h1: 15px;
+
+    @include from(412px) {
+        --margin-bottom-h1: 18px;
+    }
+
+    @include from(medium) {
+        --margin-bottom-h1: 22px;
+    }
+
+    @include from(xxmedium) {
+        --margin-bottom-h1: 28px;
+    }
+
+    @include from(xlarge) {
+        --margin-bottom-h1: 36px;
+    }
+}
+
+
+// Padding
+:root {
+    --padding-alt: 1rem .625rem;
+    --padding-primary: 2rem .625rem;
+
+    @include from(360px) {
+        --padding-alt: 1rem .875rem;
+        --padding-primary: 2rem .875rem;
+    }
+
+    @include from(412px) {
+        --padding-alt: 1.4rem .875rem;
+        --padding-primary: 2.3rem 1.3rem;
+    }
+
+    // 540px
+    @include from(medium) {
+        --padding-alt: 1.6rem 1.3rem;
+        --padding-primary: 2.5rem 24px;
+    }
+
+    // 640px
+    @include from(xmedium) {
+        --padding-alt: 1.6rem 1.8rem;
+        --padding-primary: 2.7rem 30px;
+    }
+
+    // 960px
+    @include from(xxmedium) {
+        --padding-alt: 2.5rem 3rem;
+        --padding-primary: 2.7rem 70px;
+    }
+
+    // 1160px
+    @include from(llarge) {
+        --padding-alt: 2.7rem 6rem;
+        --padding-primary: 2.7rem 150px;
+    }
+}
+
+// Variables para cursor.
+:root {
+    --cursor-button: default;
+
+    @include from(large) {
+        --cursor-button: pointer;
+    }
+}
+
+
