@@ -71,6 +71,16 @@ button {
 //     display: block;
 // }
 
+// Reset small
 small {
     font-size: var(--font-size-small);
 }
+
+// Reset <ul>
+ul {
+    margin-top: 0;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
