@@ -29,6 +29,22 @@ $breakpoints: (
 :root {
     --min-width: 320px;
     --max-width: 1200px;
+    --height-header: 4rem;
+
+    // Wide 540px
+    // @include from(540px) {
+    //     --height-header: 3.8rem;
+    // }
+
+    // Wide 640px
+    // @include from(medium) {
+    //     --height-header: 4rem;
+    // }
+
+    // Wide 1024px
+    // @include from(large) {
+    //     --height-header: 5rem;
+    // }
 }
 
 

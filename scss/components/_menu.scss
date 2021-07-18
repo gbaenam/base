@@ -1,0 +1,36 @@
+.main-nav {
+
+    left: 0;
+    width: 80vw;
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    top: var(--height-header);
+    background-color: yellowgreen;
+    height: calc(100vh - #{var(--height-header)});
+
+    &__help-bar {
+        background-color: lightskyblue;
+        order: -1;
+    }
+
+    &__social-bar {
+        padding: 1rem;
+        display: flex;
+        margin-top: auto;
+        justify-content: space-between;
+
+        background-color: lightskyblue;
+    }
+
+    &__social-bar :is(i) {
+        font-size: 26px;
+    }
+
+
+}
+
+
+
+
+

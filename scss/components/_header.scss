@@ -1,7 +1,14 @@
 .main-header {
+    top: 0;
+    width: 100%;
+    height: var(--height-header);
+    // background-color: lightgreen;
 
     &__container {
         display: flex;
+        align-items: center;
+
+        // background-color: lightgrey;
     }
 
     // &__container :is(a) {
@@ -9,11 +16,15 @@
     // }
 
     &__container :is(img) {
-        width: 6rem;
+        width: 3rem;
+        margin-right: .5rem;
     }
 
     &__title {
-        font-size: 1rem;
+        font-size: 2rem;
         margin-bottom: 0;
+        font-weight: 700;
+        margin-right: auto;
+        font-family: 'Amaranth', sans-serif;
     }
 }
