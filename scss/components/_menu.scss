@@ -1,34 +1,42 @@
 .main-nav {
 
-    left: 0;
+    left: -80vw;
     width: 80vw;
     display: flex;
     position: fixed;
+    overflow-y: scroll;
+    transition: left .6s;
     flex-direction: column;
     top: var(--height-header);
     background-color: yellowgreen;
     height: calc(100vh - #{var(--height-header)});
 
+    &__move {
+        left: 0;
+    }
+
     &__help-bar {
         background-color: lightskyblue;
         order: -1;
-    }
-
-    &__social-bar {
-        padding: 1rem;
-        display: flex;
-        margin-top: auto;
-        justify-content: space-between;
-
-        background-color: lightskyblue;
-    }
-
-    &__social-bar :is(i) {
-        font-size: 26px;
     }
 }
 
 
 
+// .main-nav {
+//     left: -80vw;
+//     display: flex;
+//     overflow-y: auto;
+//     width: var(--width-nav);
+//     height: var(--height-nav);
+//     top: var(--height-header);
+//     position: var(--position-nav);
+//     transition: var(--transition-nav);
+//     flex-direction: var(--flex-direction-nav);
+//     background-color: var(--background-color-nav);
 
+//     &__move {
+//         left: 0;
+//     }
+// }
 
