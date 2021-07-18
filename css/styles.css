@@ -193,7 +193,7 @@ ul {
   .main-header__container {
     display: flex;
     align-items: center; }
-  .main-header__container :is(img) {
+  .main-header__logo {
     width: 3rem;
     margin-right: .5rem; }
   .main-header__title {

@@ -11,11 +11,7 @@
         // background-color: lightgrey;
     }
 
-    // &__container :is(a) {
-    //     background-color: #fff;
-    // }
-
-    &__container :is(img) {
+    &__logo {
         width: 3rem;
         margin-right: .5rem;
     }
