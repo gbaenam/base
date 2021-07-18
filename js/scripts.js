@@ -13,20 +13,27 @@ burguerButton.addEventListener('click', () => {
 })
 
 
-// const changeIcons = () => {
-//     if (mql.matches) {
-//         document.getElementById("checkin").src = "img/icons/checkin-desk.svg"
-//         document.getElementById("contact").src = "img/icons/contact-desk.svg"
-//     }
+const changeIcons = () => {
+    if (mql.matches) {
+        document.getElementById("checkin").src = "img/icons/checkin-desk.svg"
+        document.getElementById("contact").src = "img/icons/contact-desk.svg"
+    }
 
-//     else {
-//         document.getElementById("checkin").src = "img/icons/checkin-mobl.svg"
-//         document.getElementById("contact").src = "img/icons/contact-mobl.svg"
-//     }
-// }
+    else {
+        document.getElementById("checkin").src = "img/icons/checkin-mobl.svg"
+        document.getElementById("contact").src = "img/icons/contact-mobl.svg"
+    }
+}
 
-// changeIcons()
+changeIcons()
 
-// mql.addEventListener('change', changeIcons)
+mql.addEventListener('change', changeIcons)
+
+const   w = window.innerWidth,
+        h = window.innerHeight
+
+console.log(w)
+console.log(h)
+
 
 

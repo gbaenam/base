@@ -18,25 +18,19 @@
     &__help-bar {
         background-color: lightskyblue;
         order: -1;
+
+        display: flex;
+        justify-content: flex-end;
+
+        padding: .5rem 1rem;
+    }
+
+    &__help-bar button:first-child {
+        margin-right: .8rem;
+    }
+
+    &__help-bar :is(img) {
+        width: 2.8rem;
     }
 }
-
-
-
-// .main-nav {
-//     left: -80vw;
-//     display: flex;
-//     overflow-y: auto;
-//     width: var(--width-nav);
-//     height: var(--height-nav);
-//     top: var(--height-header);
-//     position: var(--position-nav);
-//     transition: var(--transition-nav);
-//     flex-direction: var(--flex-direction-nav);
-//     background-color: var(--background-color-nav);
-
-//     &__move {
-//         left: 0;
-//     }
-// }
 

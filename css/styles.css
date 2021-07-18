@@ -258,4 +258,11 @@ ul {
     left: 0; }
   .main-nav__help-bar {
     background-color: lightskyblue;
-    order: -1; }
+    order: -1;
+    display: flex;
+    justify-content: flex-end;
+    padding: .5rem 1rem; }
+  .main-nav__help-bar button:first-child {
+    margin-right: .8rem; }
+  .main-nav__help-bar :is(img) {
+    width: 2.8rem; }
