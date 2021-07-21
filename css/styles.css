@@ -253,12 +253,12 @@ ul {
   flex-direction: column;
   top: var(--height-header);
   background-color: yellowgreen;
-  height: calc(100vh - var(--height-header)); }
+  overflow-y: auto; }
   .main-nav__move {
     left: 0; }
   .main-nav__help-bar {
-    background-color: lightskyblue;
     order: -1;
+    background-color: lightskyblue;
     display: flex;
     justify-content: flex-end;
     padding: .5rem 1rem; }
@@ -266,3 +266,11 @@ ul {
     margin-right: .8rem; }
   .main-nav__help-bar :is(img) {
     width: 2.8rem; }
+  .main-nav__social-bar {
+    display: flex;
+    margin-top: auto;
+    padding: 1rem .5rem;
+    justify-content: space-around;
+    background-color: lightskyblue; }
+  .main-nav__social-bar :is(i) {
+    font-size: 1.6rem; }

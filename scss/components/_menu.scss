@@ -9,15 +9,17 @@
     flex-direction: column;
     top: var(--height-header);
     background-color: yellowgreen;
-    height: calc(100vh - #{var(--height-header)});
+    // height: calc(100vh - #{var(--height-header)});
+
+    overflow-y: auto;
 
     &__move {
         left: 0;
     }
 
     &__help-bar {
-        background-color: lightskyblue;
         order: -1;
+        background-color: lightskyblue;
 
         display: flex;
         justify-content: flex-end;
@@ -31,6 +33,18 @@
 
     &__help-bar :is(img) {
         width: 2.8rem;
+    }
+
+    &__social-bar {
+        display: flex;
+        margin-top: auto;
+        padding: 1rem .5rem;
+        justify-content: space-around;
+        background-color: lightskyblue;
+    }
+
+    &__social-bar :is(i) {
+        font-size: 1.6rem;
     }
 }
 
