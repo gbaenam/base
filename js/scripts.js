@@ -24,9 +24,7 @@ addEventListener('DOMContentLoaded', () => {
         if (mql.matches) {
             document.getElementById("checkin").src = "img/icons/checkin-desk.svg"
             document.getElementById("contact").src = "img/icons/contact-desk.svg"
-        }
-
-        else {
+        } else {
             document.getElementById("checkin").src = "img/icons/checkin-mobl.svg"
             document.getElementById("contact").src = "img/icons/contact-mobl.svg"
         }
@@ -34,7 +32,7 @@ addEventListener('DOMContentLoaded', () => {
     // Ejecución de la función change icons.
     changeIcons()
 
-    // Evento 'change' change icons.
+    // Evento 'change' consulta de medios.
     mql.addEventListener('change', changeIcons)
 
 
@@ -44,17 +42,24 @@ addEventListener('DOMContentLoaded', () => {
 
     // Función alturaInterna
     alturaInterna = () => {
-        vh = innerHeight
-        const styles = `height: calc(${vh/16}rem - ${heightHeader})`
-        document.getElementById('main-nav').setAttribute('style', styles)
+        if (mql.matches) {
+            const styles = `height: auto`
+            document.getElementById('main-nav').setAttribute('style', styles)
+        } else {
+            vh = innerHeight
+            const styles = `height: calc(${vh/16}rem - ${heightHeader})`
+            document.getElementById('main-nav').setAttribute('style', styles)
+        }
     }
 
     // Ejecución de la función alturaInterna.
     alturaInterna()
 
+    // Evento 'change' consulta de medios.
+    mql.addEventListener('change', alturaInterna)
+
     // Evento 'resize' alturaInterna.
     addEventListener('resize', alturaInterna)
-
 })
 
 
@@ -74,10 +79,4 @@ addEventListener('DOMContentLoaded', () => {
 //     border-radius: ${br};
 //     font-size: ${hdr};
 // `
-
-
-
-
-
-
 

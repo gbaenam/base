@@ -14,10 +14,10 @@
     @include from(large) {
         position: static;
         width: auto;
-        height: auto;
         overflow-y: auto;
         transition: none;
-        // background-color:
+        background-color: pink;
+        flex-direction: row;
     }
 
 
@@ -28,11 +28,20 @@
     &__menu {
         border-top: 1px solid #11191e;
         border-bottom: 2px solid #485761;
+
+        @include from(large) {
+            display: flex;
+            border: none;
+        }
     }
 
     &__menu :is(li) {
         border-top: 2px solid #485761;
         border-bottom: 1px solid #11191e;
+
+        @include from(large) {
+            border: none;
+        }
     }
 
     &__menu :is(li):hover {
@@ -44,6 +53,10 @@
         display: block;
         padding: .7rem;
         color: #aab0b5;
+
+        @include from(large) {
+            color: black;
+        }
     }
 
     &__menu :is(a):hover {
@@ -55,6 +68,11 @@
         display: flex;
         padding: 1.2rem 1rem;
         justify-content: flex-end;
+
+        @include from(large) {
+            padding: 0;
+            order: unset;
+        }
     }
 
     &__help-bar button:first-child {
@@ -71,6 +89,10 @@
         margin-top: auto;
         padding: 1rem .5rem 1.2rem;
         justify-content: space-around;
+
+        @include from(large) {
+            display: none;
+        }
     }
 
     &__social-bar :is(i) {
