@@ -252,8 +252,14 @@ ul {
   transition: left .6s;
   flex-direction: column;
   top: var(--height-header);
-  background-color: #2a3b47;
-  overflow-y: auto; }
+  background-color: #2a3b47; }
+  @media screen and (min-width: 1024px) {
+    .main-nav {
+      position: static;
+      width: auto;
+      height: auto;
+      overflow-y: auto;
+      transition: none; } }
   .main-nav__move {
     left: 0; }
   .main-nav__menu {

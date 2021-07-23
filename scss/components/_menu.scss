@@ -11,7 +11,15 @@
     background-color: #2a3b47;
     // height: calc(100vh - #{var(--height-header)});
 
-    overflow-y: auto;
+    @include from(large) {
+        position: static;
+        width: auto;
+        height: auto;
+        overflow-y: auto;
+        transition: none;
+        // background-color:
+    }
+
 
     &__move {
         left: 0;
