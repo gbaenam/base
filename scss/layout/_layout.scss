@@ -2,11 +2,15 @@
     height: 100%;
     margin-left: auto;
     margin-right: auto;
+    padding: 0 .5rem 0 .3rem;
     min-width: var(--min-width);
     max-width: var(--max-width);
 
-    padding: 0 .5rem 0 .3rem;
+    @include from(xlarge) {
+        padding: 0;
+    }
 }
+
 
 
 

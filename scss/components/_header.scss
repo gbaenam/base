@@ -1,14 +1,10 @@
 .main-header {
-    top: 0;
-    width: 100%;
-    height: var(--height-header);
     background-color: #fff;
+    height: var(--height-header);
 
     &__container {
         display: flex;
         align-items: center;
-
-        // background-color: lightgrey;
     }
 
     &__logo {

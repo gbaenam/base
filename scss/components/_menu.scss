@@ -9,17 +9,15 @@
     flex-direction: column;
     top: var(--height-header);
     background-color: #2a3b47;
-    // height: calc(100vh - #{var(--height-header)});
 
     @include from(large) {
-        position: static;
         width: auto;
+        position: static;
         overflow-y: auto;
         transition: none;
-        background-color: pink;
         flex-direction: row;
+        background-color: transparent;
     }
-
 
     &__move {
         left: 0;
@@ -30,73 +28,98 @@
         border-bottom: 2px solid #485761;
 
         @include from(large) {
-            display: flex;
             border: none;
+            display: flex;
         }
     }
 
-    &__menu :is(li) {
+    &__item {
         border-top: 2px solid #485761;
         border-bottom: 1px solid #11191e;
 
         @include from(large) {
             border: none;
+            margin-right: 30px;
         }
     }
 
-    &__menu :is(li):hover {
+    &__item:last-child {
+
+        @include from(large) {
+            margin-right: 50px;
+        }
+    }
+
+    &__item:hover {
         border-top: none;
         border-bottom: none;
     }
 
-    &__menu :is(a) {
+    &__link {
         display: block;
         padding: .7rem;
         color: #aab0b5;
 
         @include from(large) {
-            color: black;
+            padding: .7rem 0;
+            color: rgb(0, 0, 139);
         }
     }
 
-    &__menu :is(a):hover {
+    &__link:hover {
         color: #fff;
-    }
-
-    &__help-bar {
-        order: -1;
-        display: flex;
-        padding: 1.2rem 1rem;
-        justify-content: flex-end;
 
         @include from(large) {
-            padding: 0;
-            order: unset;
+            color: rgb(0, 0, 139);
+        }
+    }
+}
+
+.help-bar {
+    order: -1;
+    display: flex;
+    padding: 1.2rem 1rem;
+    justify-content: flex-end;
+
+    @include from(large) {
+        padding: 0;
+        order: unset;
+    }
+
+    &__button:first-child {
+        margin-right: .8rem;
+
+        @include from(large) {
+            margin-right: 1.3rem;
         }
     }
 
-    &__help-bar button:first-child {
-        margin-right: .8rem;
-    }
-
-    &__help-bar :is(img) {
+    &__icon {
         width: 2.8rem;
     }
+}
 
-    &__social-bar {
-        color: #fff;
-        display: flex;
-        margin-top: auto;
-        padding: 1rem .5rem 1.2rem;
-        justify-content: space-around;
+.social-bar {
+    display: flex;
+    color: #fff;
+    margin-top: auto;
+    font-size: 1.6rem;
+    padding: 1rem .5rem 1.2rem;
+    justify-content: space-around;
 
-        @include from(large) {
-            display: none;
-        }
+    // 540px
+    @include from(medium) {
+        font-size: 1.8rem;
     }
 
-    &__social-bar :is(i) {
-        font-size: 1.6rem;
+    // 960px
+    @include from(xxmedium) {
+        padding: 1.2rem 5rem;
+        justify-content: space-between;
+    }
+
+    @include from(large) {
+        display: none;
     }
 }
 
