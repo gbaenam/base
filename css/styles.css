@@ -245,7 +245,7 @@ ul {
     top: 0; }
 
 .main-nav {
-  left: 0;
+  left: -80vw;
   width: 80vw;
   display: flex;
   position: fixed;
