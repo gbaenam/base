@@ -28,9 +28,9 @@ $breakpoints: (
 // Anchos y alturas.
 :root {
     --min-width: 320px;
-    --max-width: 1200px;
+    --max-width: 1430px;
     --height-header: 4rem;
-    --height-footer: 10rem;
+    --height-footer: 5rem;
 
     // Wide 540px
     // @include from(540px) {
@@ -43,9 +43,10 @@ $breakpoints: (
     // }
 
     // Wide 1024px
-    // @include from(large) {
-    //     --height-header: 5rem;
-    // }
+    @include from(large) {
+        --height-header: 5rem;
+        --height-footer: 10rem;
+    }
 }
 
 

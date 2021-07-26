@@ -18,7 +18,6 @@ addEventListener('DOMContentLoaded', () => {
         burguerLine.classList.toggle('cruz')
         nav.classList.toggle('main-nav__move')
     }
-
     // Evento 'click' hamburger button animation.
     burguerButton.addEventListener('click', buttonAnimation)
 
@@ -34,45 +33,39 @@ addEventListener('DOMContentLoaded', () => {
             iconContact.src = "img/icons/contact-mobl.svg"
         }
     }
-
     // Ejecución de la función change icons.
     changeIcons()
-
     // Evento 'change' consulta de medios.
     mql.addEventListener('change', changeIcons)
 
 
 
-    // Leyendo la variable CSS '--height-header' con JavaScript.
-    const heightHeader = getComputedStyle(document.documentElement).getPropertyValue('--height-header')
-
-    // Leyendo la variable CSS '--height-footer' con JavaScript.
-    const heightFooter = getComputedStyle(document.documentElement).getPropertyValue('--height-footer')
-
-
-
     // Función Altura Elemento.
     elementHeight = () => {
+        // Altura interna del viewport.
         vh = innerHeight
-        const mainHeight = `min-height: calc(${vh/16}rem - ${heightHeader} - ${heightFooter})`
+        // Leyendo la variable CSS '--height-header' con JavaScript.
+        heightHeader = getComputedStyle(document.documentElement).getPropertyValue('--height-header')
+        // Leyendo la variable CSS '--height-footer' con JavaScript.
+        heightFooter = getComputedStyle(document.documentElement).getPropertyValue('--height-footer')
+        // Altura mínima del main
+        mainHeight = `min-height: calc(${vh/16}rem - ${heightHeader} - ${heightFooter})`
+        // Aplicando el estilo (min-height) a main
         main.setAttribute('style', mainHeight)
 
         if (mql.matches) {
-            const navHeight = `height: auto`
+            navHeight = `height: auto`
             nav.setAttribute('style', navHeight)
         } else {
             vh = innerHeight
-            const navHeight = `height: calc(${vh/16}rem - ${heightHeader})`
+            navHeight = `height: calc(${vh/16}rem - ${heightHeader})`
             nav.setAttribute('style', navHeight)
         }
     }
-
     // Ejecución de la función Altura Elemento.
     elementHeight()
-
     // Evento 'change' consulta de medios función Altura Elemento.
     mql.addEventListener('change', elementHeight)
-
     // Evento 'resize' función Altura Elemento.
     addEventListener('resize', elementHeight)
 
@@ -85,9 +78,7 @@ addEventListener('DOMContentLoaded', () => {
             nav.insertAdjacentElement('beforeend', socialBar)
         }
     }
-
     moveSocialBar()
-
     mql.addEventListener('change', moveSocialBar)
 
 })

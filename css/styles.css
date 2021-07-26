@@ -7,9 +7,13 @@
 
 :root {
   --min-width: 320px;
-  --max-width: 1200px;
+  --max-width: 1430px;
   --height-header: 4rem;
-  --height-footer: 10rem; }
+  --height-footer: 5rem; }
+  @media screen and (min-width: 1024px) {
+    :root {
+      --height-header: 5rem;
+      --height-footer: 10rem; } }
 
 :root {
   --font-family-body:'Roboto', sans-serif;
@@ -295,11 +299,6 @@ ul {
     @media screen and (min-width: 1024px) {
       .main-nav__link {
         padding: .7rem 0;
-        color: darkblue; } }
-  .main-nav__link:hover {
-    color: #fff; }
-    @media screen and (min-width: 1024px) {
-      .main-nav__link:hover {
         color: darkblue; } }
 
 .help-bar {

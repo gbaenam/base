@@ -66,13 +66,17 @@
         }
     }
 
-    &__link:hover {
-        color: #fff;
+    // &__link:visited {
+    //     color: red;
+    // }
 
-        @include from(large) {
-            color: rgb(0, 0, 139);
-        }
-    }
+    // &__link:hover {
+    //     color: #fff;
+
+    //     @include from(large) {
+    //         color: rgb(0, 0, 139);
+    //     }
+    // }
 }
 
 .help-bar {
