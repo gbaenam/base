@@ -6,6 +6,9 @@ addEventListener('DOMContentLoaded', () => {
             nav = document.getElementById('main-nav'),
             iconCheckin = document.getElementById('checkin'),
             iconContact = document.getElementById('contact'),
+            socialBar = document.getElementById('social-bar'),
+            main = document.getElementById('main'),
+            footerContainer = document.getElementById('footer-container'),
             mql = matchMedia('(min-width: 1024px)')
 
 
@@ -43,35 +46,51 @@ addEventListener('DOMContentLoaded', () => {
     // Leyendo la variable CSS '--height-header' con JavaScript.
     const heightHeader = getComputedStyle(document.documentElement).getPropertyValue('--height-header')
 
-    // Función alturaInterna
-    alturaInterna = () => {
+    // Leyendo la variable CSS '--height-footer' con JavaScript.
+    const heightFooter = getComputedStyle(document.documentElement).getPropertyValue('--height-footer')
+
+
+
+    // Función Altura Elemento.
+    elementHeight = () => {
+        vh = innerHeight
+        const mainHeight = `min-height: calc(${vh/16}rem - ${heightHeader} - ${heightFooter})`
+        main.setAttribute('style', mainHeight)
+
         if (mql.matches) {
-            const styles = `height: auto`
-            document.getElementById('main-nav').setAttribute('style', styles)
+            const navHeight = `height: auto`
+            nav.setAttribute('style', navHeight)
         } else {
             vh = innerHeight
-            const styles = `height: calc(${vh/16}rem - ${heightHeader})`
-            document.getElementById('main-nav').setAttribute('style', styles)
+            const navHeight = `height: calc(${vh/16}rem - ${heightHeader})`
+            nav.setAttribute('style', navHeight)
         }
     }
 
-    // Ejecución de la función alturaInterna.
-    alturaInterna()
+    // Ejecución de la función Altura Elemento.
+    elementHeight()
 
-    // Evento 'change' consulta de medios.
-    mql.addEventListener('change', alturaInterna)
+    // Evento 'change' consulta de medios función Altura Elemento.
+    mql.addEventListener('change', elementHeight)
 
-    // Evento 'resize' alturaInterna.
-    addEventListener('resize', alturaInterna)
+    // Evento 'resize' función Altura Elemento.
+    addEventListener('resize', elementHeight)
+
+
+
+    const moveSocialBar = () => {
+        if (mql.matches) {
+            footerContainer.insertAdjacentElement('beforeend', socialBar)
+        } else {
+            nav.insertAdjacentElement('beforeend', socialBar)
+        }
+    }
+
+    moveSocialBar()
+
+    mql.addEventListener('change', moveSocialBar)
+
 })
-
-
-
-
-
-
-
-
 
 
 

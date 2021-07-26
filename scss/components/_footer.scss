@@ -1,0 +1,21 @@
+.main-footer {
+    // margin-top: auto;
+    background-color: #2e5dd8;
+    height: var(--height-footer);
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__title {
+        color: #fff;
+        text-align: center;
+
+        @include from(large) {
+            margin-bottom: 30px;
+        }
+    }
+
+}

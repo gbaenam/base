@@ -120,7 +120,8 @@
 
     // 1024px
     @include from(large) {
-        display: none;
+        margin: 0;
+        padding: 0 20rem;
     }
 }
 

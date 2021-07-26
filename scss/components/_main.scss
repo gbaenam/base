@@ -1,0 +1,11 @@
+.main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    &__title {
+        color: #000;
+        margin-bottom: 0;
+    }
+}
