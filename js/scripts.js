@@ -48,7 +48,7 @@ addEventListener('DOMContentLoaded', () => {
         heightHeader = getComputedStyle(document.documentElement).getPropertyValue('--height-header')
         // Leyendo la variable CSS '--height-footer' con JavaScript.
         heightFooter = getComputedStyle(document.documentElement).getPropertyValue('--height-footer')
-        // Altura mínima del main
+        // Almacenando altura mínima del main en mainHeight.
         mainHeight = `min-height: calc(${vh/16}rem - ${heightHeader} - ${heightFooter})`
         // Aplicando el estilo (min-height) a main
         main.setAttribute('style', mainHeight)

@@ -39,14 +39,14 @@
 
         @include from(large) {
             border: none;
-            margin-right: 30px;
+            margin-right: 10px;
         }
     }
 
     &__item:last-child {
 
         @include from(large) {
-            margin-right: 50px;
+            margin-right: 40px;
         }
     }
 
@@ -58,25 +58,28 @@
     &__link {
         display: block;
         padding: .7rem;
-        color: #aab0b5;
+        font-weight: 400;
+        color: var(--color-link);
 
         @include from(large) {
-            padding: .7rem 0;
-            color: rgb(0, 0, 139);
+            border: 3px solid transparent;
+            border-radius: 5px;
+            padding: .1rem .5rem;
+            font-weight: 500;
         }
     }
 
     // &__link:visited {
-    //     color: red;
+    //     color: var(--color-link-visited);
     // }
 
-    // &__link:hover {
-    //     color: #fff;
+    &__link:hover {
+        color: var(--color-link-hover);
+    }
 
-    //     @include from(large) {
-    //         color: rgb(0, 0, 139);
-    //     }
-    // }
+    &__link:focus {
+        border-color: var(--border-color-link-focus);
+    }
 }
 
 .help-bar {

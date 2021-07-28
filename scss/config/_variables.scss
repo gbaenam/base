@@ -29,18 +29,9 @@ $breakpoints: (
 :root {
     --min-width: 320px;
     --max-width: 1430px;
+    --width-logo: 2.8rem;
     --height-header: 4rem;
     --height-footer: 5rem;
-
-    // Wide 540px
-    // @include from(540px) {
-    //     --height-header: 3.8rem;
-    // }
-
-    // Wide 640px
-    // @include from(medium) {
-    //     --height-header: 4rem;
-    // }
 
     // Wide 1024px
     @include from(large) {
@@ -200,6 +191,24 @@ $breakpoints: (
 
     @include from(large) {
         --cursor-button: pointer;
+    }
+}
+
+// Variables para los enlaces <a></a>
+:root {
+    --color-link: #aab0b5;
+    --color-link-alt: #00008b;
+    --color-link-hover: #fff;
+
+    @include from(large) {
+        --color-link: #6a7477;
+        --color-link-alt: #00008b;
+        --color-link-visited: #2e5dd8;
+        --color-link-hover: #6a7477;
+        --color-link-active: indigo;
+        --border-color-link-focus: #2e5dd8;
+        --border-radius-link: .3125rem;
+        --border-link: .1875rem solid transparent;
     }
 }
 

@@ -10,7 +10,27 @@
 .main-header__layout {
     padding: 0 .5rem 0 .3rem;
 
+    @include from(412px) {
+        padding: 0 .7rem 0 .5rem;
+    }
+
+    // Wide 640px
+    @include from(xmedium) {
+        padding: 0 .9rem 0 .5rem;
+    }
+
+    // Wide 1024px
+    @include from(large) {
+        padding: 0 1.5rem 0 .7rem;
+    }
+
+    // Wide 1280px
     @include from(xlarge) {
+        padding: 0 1.5rem 0 1rem;
+    }
+
+    // Wide 1500px
+    @include from(1500px) {
         padding: 0;
     }
 }
