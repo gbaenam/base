@@ -30,12 +30,11 @@ $breakpoints: (
     --min-width: 320px;
     --max-width: 1430px;
     --width-logo: 2.8rem;
-    --height-header: 4rem;
+    --height-header: 3.8rem;
     --height-footer: 5rem;
 
     // Wide 1024px
     @include from(large) {
-        --height-header: 5rem;
         --height-footer: 10rem;
     }
 }
@@ -206,9 +205,10 @@ $breakpoints: (
         --color-link-visited: #2e5dd8;
         --color-link-hover: #6a7477;
         --color-link-active: indigo;
-        --border-color-link-focus: #2e5dd8;
+        --border-color-link-focus: #41c66e;
+        --border-color-link-focus-alt: #62e884;
         --border-radius-link: .3125rem;
-        --border-link: .1875rem solid transparent;
+        --border-link: .125rem solid transparent;
     }
 }
 
