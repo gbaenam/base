@@ -250,11 +250,12 @@ ul {
     display: flex;
     align-items: center; }
   .main-header__link-logo {
-    border: var(--border-link);
     padding: var(--padding-link-logo);
-    border-radius: var(--border-radius-link);
     margin-right: var(--margin-right-link-logo); }
-  .main-header__link-logo:focus {
+  .main-header__link-logo, .main-header__title-link {
+    border: var(--border-link);
+    border-radius: var(--border-radius-link); }
+  .main-header__link-logo:focus, .main-header__title-link:focus {
     border-color: var(--border-color-link-focus); }
   .main-header__logo {
     width: var(--width-logo); }
@@ -266,12 +267,8 @@ ul {
     font-family: var(--font-family-title);
     font-weight: var(--font-weight-title); }
   .main-header__title-link {
-    border: var(--border-link);
     padding: var(--padding-title-link);
-    color: var(--font-color-title-link);
-    border-radius: var(--border-radius-link); }
-  .main-header__title-link:focus {
-    border-color: var(--border-color-link-focus); }
+    color: var(--font-color-title-link); }
 
 .burguer-button {
   --color-line-inner: #094293;
