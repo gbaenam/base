@@ -261,10 +261,10 @@ ul {
   .main-header__title {
     margin-bottom: 0;
     margin-right: auto;
+    line-height: var(--line-height-title);
     font-size: var(--font-size-title);
     font-family: var(--font-family-title);
-    font-weight: var(--font-weight-title);
-    line-height: var(--line-height-title); }
+    font-weight: var(--font-weight-title); }
   .main-header__title-link {
     border: var(--border-link);
     padding: var(--padding-title-link);

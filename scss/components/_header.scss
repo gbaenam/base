@@ -46,10 +46,13 @@
     &__title {
         margin-bottom: 0;
         margin-right: auto;
-        font-size: var(--font-size-title);
-        font-family: var(--font-family-title);
-        font-weight: var(--font-weight-title);
         line-height: var(--line-height-title);
+
+        font: {
+            size: var(--font-size-title);
+            family: var(--font-family-title);
+            weight: var(--font-weight-title);
+        }
     }
 
     &__title-link {
