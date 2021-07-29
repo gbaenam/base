@@ -15,16 +15,10 @@
     --border-top-item: .125rem solid #485761;
     --border-bottom-item: .0625rem solid #11191e;
 
-    /* --------- LINK ------------*/
+    /* -------------- LINK -----------------*/
     --padding-link: .7rem;
     --font-weight-link: 400;
-
-    /* ----------------- HELP BAR --------------------*/
-    --order-help-bar: -1;
-    --padding-help-bar: 1.2rem 1rem;
-    --justify-content-help-bar: flex-end;
-    --margin-right-button-checkin: .8rem;
-
+    /*--------------------------------------*/
 
 
     @include from(large) {
@@ -37,27 +31,70 @@
         --align-items-main-nav: center;
         --background-color-main-nav: transparent;
 
-        /* -----------MENU -------------*/
+        /* ---------MENU ----------*/
         --display-menu: flex;
         --border-top-menu: none;
         --border-bottom-menu: none;
 
-        /* -------------ITEM ---------------*/
+        /* ---------------ITEM ----------------*/
         --border-top-item: none;
         --border-bottom-item: none;
         --margin-right-item: .625rem;
         --margin-right-item-last-child: 2.5rem;
 
-        /* -----------LINK -------------*/
+        /* -----------LINK --------------*/
         --font-weight-link: 500;
         --padding-link: .1rem .5rem;
+        /*-------------------------------*/
+    }
+}
 
-        /* ---------- HELP BAR -------------*/
+.help-bar {
+    --order-help-bar: -1;
+    --padding-help-bar: 1.2rem 1rem;
+    --justify-content-help-bar: flex-end;
+    --margin-right-button-checkin: .8rem;
+    /*-------------------------------------*/
+
+    @include from(large) {
         --padding-help-bar: 0;
         --order-help-bar: unset;
         --padding-help-bar-button: .2rem;
         --justify-content-help-bar: unset;
         --margin-right-button-checkin: .6rem;
+        /*-----------------------------------*/
+    }
+}
+
+.social-bar {
+    --margin-top-social-bar: auto;
+    --font-size-social-bar: 1.6rem;
+    --padding-social-bar: 1rem 0 1.2rem;
+    /*------------------------------------*/
+
+    // Wide 540px
+    @include from(medium) {
+        --font-size-social-bar: 1.8rem;
+        --padding-social-bar: 1rem 1rem 1.2rem;
+        /*------------------------------------*/
+    }
+
+    // Wide 960px
+    @include from(xxmedium) {
+        --padding-social-bar: 1rem 5rem 1.2rem;
+        /*---------------------------------------*/
+    }
+
+    // Wide 1024px
+    @include from(large) {
+        --margin-top-social-bar: 0;
+        --padding-social-bar: 0rem 20rem;
+        --width-social-bar-a: 3.125rem;
+        --height-social-bar-a: 3.125rem;
+        --display-social-bar-a: flex;
+        --align-items-social-bar-a: center;
+        --justify-content-social-bar-a: center;
+        /*----------------------------------------*/
     }
 }
 
@@ -149,49 +186,25 @@
 
 .social-bar {
     display: flex;
-    margin-top: auto;
-    font-size: 1.6rem;
-    padding: 1rem 0 1.2rem;
     justify-content: space-around;
-
-
-    // 540px
-    @include from(medium) {
-        font-size: 1.8rem;
-        padding: 1rem 1rem 1.2rem;
-    }
-
-    // 960px
-    @include from(xxmedium) {
-        padding: 1rem 5rem 1.2rem;
-    }
-
-    // 1024px
-    @include from(large) {
-        margin: 0;
-        padding: 0 20rem;
-    }
-
+    padding: var(--padding-social-bar);
+    font-size: var(--font-size-social-bar);
+    margin-top: var(--margin-top-social-bar);
 
     a {
         color: #fff;
-
-        @include from(large) {
-            width: 3.125rem;
-            height: 3.125rem;
-            border: 2px solid transparent;
-            border-radius: 5px;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+        border: var(--border-link);
+        width: var(--width-social-bar-a);
+        height: var(--height-social-bar-a);
+        display: var(--display-social-bar-a);
+        border-radius: var(--border-radius-link);
+        align-items: var(--align-items-social-bar-a);
+        justify-content: var(--justify-content-social-bar-a);
     }
 
-    @include from(large) {
-        a:focus {
-            border-color: var(--border-color-link-focus-alt);
-        }
+    a:focus {
+        border-color: var(--border-color-link-focus-alt);
     }
 }
+
 
