@@ -7,13 +7,15 @@
 
 body {
     margin: 0;
-    font-weight: 400;
-    color: rgb(30, 63, 63);
-    font-size: var(--font-size-body);
+    color: var(--color-body);
     line-height: var(--line-height-body);
-    font-family: var(--font-family-body-alt);
+    background-color: var(--background-color-body);
 
-    background-color: lightgrey;
+    font: {
+        size: var(--font-size-body);
+        weight: var(--font-weight-body);
+        family: var(--font-family-body);
+    }
 }
 
 // Reset <img>
@@ -29,21 +31,13 @@ h1,h2,h3,h4,h5,h6 {
     margin-bottom: 0;
 }
 
-h1 {
-    font-weight: 700;
-    // color: rgb(129, 65, 65);
-    font-size: var(--font-size-h1);
-    line-height: var(--line-height-h1);
-    font-family: var(--font-family-h1-alt);
-    margin-bottom: var(--margin-bottom-h1);
-}
+// h1 {
 
-h2 {
-    font-weight: 300;
-    line-height: 111%;
-    font-size: var(--font-size-h2);
-    font-family: var(--font-family-h2);
-}
+// }
+
+// h2 {
+
+// }
 
 // h3 {
 //     font-family: var(--font-family-footer);

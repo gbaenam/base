@@ -29,8 +29,7 @@ $breakpoints: (
 :root {
     --min-width: 320px;
     --max-width: 1430px;
-    --width-logo: 2.8rem;
-    --height-header: 3.8rem;
+
     --height-footer: 5rem;
 
     // Wide 1024px
@@ -42,25 +41,70 @@ $breakpoints: (
 
 // Familia de fuentes.
 :root {
-    // Font Family body
-    --font-family-body:'Roboto', sans-serif;
-    --font-family-body-alt: 'Bitter', serif;
-
-    // Font Family h1
-    --font-family-h1: 'Lato', sans-serif;
-    --font-family-h1-alt: 'Signika', sans-serif;
-
-    // Font Family h2
-    --font-family-h2: 'Lato', sans-serif;
-
-    // Font Family banner
-    --font-family-banner: 'Lato', sans-serif;
-
-    // Font Family banner-title
-    --font-family-banner-title: 'Open Sans', sans-serif;
 
     // Font Family footer
     --font-family-footer: 'Lato', sans-serif;
+}
+
+// Variables y estilos bara body
+:root {
+    --font-weight-body: 400;
+    --line-height-body: 140%;
+    --font-size-body: 1.25rem;
+    --color-body: rgb(30, 63, 63);
+    --font-family-body: 'Bitter', serif;
+    --background-color-body: lightgrey;
+    --font-family-body-alt:'Roboto', sans-serif;
+
+    @include from(medium) {
+        --font-size-body: 1.375rem;
+    }
+}
+
+// Variables y estilos para header
+:root {
+    --width-logo: 2.8rem;
+    --height-header: 3.8rem;
+    --background-color-header:#fff;
+
+    // Website title.
+    --color-site-title: #6a7477;
+    --font-weight-site-title: 400;
+    --line-height-site-title: 100%;
+    --font-size-site-title: 1.875rem;
+    --font-family-site-title: 'Amaranth', sans-serif;
+
+    @include from(412px) {
+        --font-size-site-title: 2.0625rem;
+    }
+}
+
+
+// Variables y estilos para menu
+:root {
+    --color-menu: #aab0b5;
+    --font-weight-menu: 400;
+    --line-height-menu: 140%;
+    --font-size-menu: 1.25rem;
+    --color-menu-hover: #fff;
+    --font-family-menu: 'Bitter', serif;
+
+    // @include from(medium) {
+    // }
+
+    @include from(large) {
+        --color-menu:#6a7477;
+        --font-weight-menu: 500;
+        --line-height-menu: 145%;
+        --font-size-menu: 1.375rem;
+        --color-menu-hover: #001a57;
+    }
+}
+
+// Variables y estilos para burguer-button
+:root {
+    --color-togle-button: #6a7477;
+    --color-togle-button-alt: #094293;
 }
 
 
@@ -69,120 +113,8 @@ $breakpoints: (
     --font-size-h1: 48px;
     --font-size-h2: 30px;
     --font-size-body: 20px;
-    --font-size-small: 16px;
-
-    @include from(360px) {
-        --font-size-h1: 53px;
-    }
-
-    @include from(412px) {
-        --font-size-h1: 58px;
-        --font-size-h2: 34px;
-    }
-
-    @include from(480px) {
-        --font-size-body: 22px;
-    }
-
-    // 540px
-    @include from(medium) {
-        --font-size-small: 18px;
-    }
-
-    // 640px
-    @include from(xmedium) {
-        --font-size-h1: 64px;
-        --font-size-h2: 36px;
-    }
-
-    // 960px
-    @include from(xxmedium) {
-        --font-size-h1: 72px;
-    }
-
-    // 1280px
-    @include from(xlarge){
-        --font-size-h2: 39px;
-    }
 }
 
-
-// Altura de línea
-:root {
-    --line-height-h1: 48px;
-    --line-height-body: 28px;
-
-    @include from(412px) {
-        --line-height-h1: 60px;
-    }
-
-    @include from(480px) {
-        --line-height-body: 32px;
-    }
-}
-
-
-// h1 - Margen inferior
-:root {
-    --margin-bottom-h1: 15px;
-
-    @include from(412px) {
-        --margin-bottom-h1: 18px;
-    }
-
-    @include from(medium) {
-        --margin-bottom-h1: 22px;
-    }
-
-    @include from(xxmedium) {
-        --margin-bottom-h1: 28px;
-    }
-
-    @include from(xlarge) {
-        --margin-bottom-h1: 36px;
-    }
-}
-
-
-// Padding
-:root {
-    --padding-alt: 1rem .625rem;
-    --padding-primary: 2rem .625rem;
-
-    @include from(360px) {
-        --padding-alt: 1rem .875rem;
-        --padding-primary: 2rem .875rem;
-    }
-
-    @include from(412px) {
-        --padding-alt: 1.4rem .875rem;
-        --padding-primary: 2.3rem 1.3rem;
-    }
-
-    // 540px
-    @include from(medium) {
-        --padding-alt: 1.6rem 1.3rem;
-        --padding-primary: 2.5rem 24px;
-    }
-
-    // 640px
-    @include from(xmedium) {
-        --padding-alt: 1.6rem 1.8rem;
-        --padding-primary: 2.7rem 30px;
-    }
-
-    // 960px
-    @include from(xxmedium) {
-        --padding-alt: 2.5rem 3rem;
-        --padding-primary: 2.7rem 70px;
-    }
-
-    // 1160px
-    @include from(llarge) {
-        --padding-alt: 2.7rem 6rem;
-        --padding-primary: 2.7rem 150px;
-    }
-}
 
 // Variables para cursor.
 :root {
@@ -195,18 +127,13 @@ $breakpoints: (
 
 // Variables para los enlaces <a></a>
 :root {
-    --color-link: #aab0b5;
-    --color-link-alt: #00008b;
-    --color-link-hover: #fff;
 
     @include from(large) {
-        --color-link: #6a7477;
-        --color-link-alt: #00008b;
-        --color-link-visited: #2e5dd8;
-        --color-link-hover: #6a7477;
-        --color-link-active: indigo;
+        // Color de borde.
         --border-color-link-focus: #41c66e;
         --border-color-link-focus-alt: #62e884;
+
+        // Tipo de borde
         --border-radius-link: .3125rem;
         --border-link: .125rem solid transparent;
     }

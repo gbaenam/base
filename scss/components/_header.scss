@@ -1,21 +1,15 @@
 /* ------------------ HEADER ---------------------- */
 .main-header {
-    --font-weight-title: 400;
-    --line-height-title: 100%;
-    --font-size-title: 1.875rem;
     --margin-right-link-logo: .3rem;
-    --background-color-header: #fff;
-    --font-color-title-link: #6a7477;
-    --font-family-title: 'Amaranth', sans-serif;
+    /*--------------------------------------------*/
 
-    @include from(412px) {
-        --font-size-title: 2.0625rem;
-    }
 
+    // Wide 1024px
     @include from(large) {
         --margin-right-link-logo: 0;
         --padding-title-link: .1rem .2rem;
         --padding-link-logo: .2rem .1rem .2rem 0;
+    /*-------------------------------------------*/
     }
 }
 
@@ -51,17 +45,17 @@
     &__title {
         margin-bottom: 0;
         margin-right: auto;
-        line-height: var(--line-height-title);
+        line-height: var(--line-height-site-title);
 
         font: {
-            size: var(--font-size-title);
-            family: var(--font-family-title);
-            weight: var(--font-weight-title);
+            size: var(--font-size-site-title);
+            family: var(--font-family-site-title);
+            weight: var(--font-weight-site-title);
         }
     }
 
     &__title-link {
         padding: var(--padding-title-link);
-        color: var(--font-color-title-link);
+        color: var(--color-site-title);
     }
 }

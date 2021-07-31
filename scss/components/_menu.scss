@@ -1,5 +1,6 @@
+/*------------------ MAIN NAV ----------------------*/
 .main-nav {
-    /* ---------------- NAV ----------------*/
+    /* ---------------- nav ----------------*/
     --width-main-nav: 80vw;
     --position-main-nav: fixed;
     --overflow-y-main-nav: scroll;
@@ -7,22 +8,21 @@
     --flex-direction-main-nav: column;
     --background-color-main-nav: #2a3b47;
 
-    /* -------------------MENU ---------------------*/
+    /* ------------------- menu ---------------------*/
     --border-top-menu: .0625rem solid #11191e;
     --border-bottom-menu: .125rem solid #485761;
 
-    /* ------------------- ITEM ---------------------*/
+    /* ------------------- item ---------------------*/
     --border-top-item: .125rem solid #485761;
     --border-bottom-item: .0625rem solid #11191e;
 
-    /* -------------- LINK -----------------*/
+    /* -------------- link -----------------*/
     --padding-link: .7rem;
-    --font-weight-link: 400;
     /*--------------------------------------*/
 
 
     @include from(large) {
-        /* ----------------- NAV -----------------*/
+        /* ----------------- nav -----------------*/
         --width-main-nav: auto;
         --position-main-nav: static;
         --overflow-y-main-nav: auto;
@@ -31,21 +31,20 @@
         --align-items-main-nav: center;
         --background-color-main-nav: transparent;
 
-        /* ---------MENU ----------*/
+        /* ---------------- menu -----------------*/
         --display-menu: flex;
         --border-top-menu: none;
         --border-bottom-menu: none;
 
-        /* ---------------ITEM ----------------*/
+        /* ----------------item ------------------*/
         --border-top-item: none;
         --border-bottom-item: none;
         --margin-right-item: .625rem;
         --margin-right-item-last-child: 2.5rem;
 
-        /* -----------LINK --------------*/
-        --font-weight-link: 500;
+        /* --------------- link ------------------*/
         --padding-link: .1rem .5rem;
-        /*-------------------------------*/
+        /*----------------------------------------*/
     }
 }
 
@@ -53,7 +52,7 @@
     --order-help-bar: -1;
     --padding-help-bar: 1.2rem 1rem;
     --justify-content-help-bar: flex-end;
-    --margin-right-button-checkin: .8rem;
+    --margin-right-help-bar-button: .8rem;
     /*-------------------------------------*/
 
     @include from(large) {
@@ -61,7 +60,7 @@
         --order-help-bar: unset;
         --padding-help-bar-button: .2rem;
         --justify-content-help-bar: unset;
-        --margin-right-button-checkin: .6rem;
+        --margin-right-help-bar-button: .6rem;
         /*-----------------------------------*/
     }
 }
@@ -100,6 +99,7 @@
 
 
 .main-nav {
+
     left: -80vw;
     display: flex;
     top: var(--height-header);
@@ -110,6 +110,7 @@
     align-items: var(--align-items-main-nav);
     flex-direction: var(--flex-direction-main-nav);
     background-color: var(--background-color-main-nav);
+
 
     &__move {
         left: 0;
@@ -138,10 +139,24 @@
 
     &__link {
         display: block;
-        color: var(--color-link);
-        border: var(--border-link);
         padding: var(--padding-link);
-        font-weight: var(--font-weight-link);
+    }
+
+    // Variables globales
+    &__link {
+        color: var(--color-menu);
+        line-height: var(--line-height-menu);
+
+        font: {
+            size: var(--font-size-menu);
+            weight: var(--font-weight-menu);
+            family: var(--font-family-menu);
+        }
+    }
+
+    // Variables globales.
+    &__link {
+        border: var(--border-link);
         border-radius: var(--border-radius-link);
     }
 
@@ -149,10 +164,12 @@
     //     color: var(--color-link-visited);
     // }
 
+    // Variable global.
     &__link:hover {
-        color: var(--color-link-hover);
+        color: var(--color-menu-hover);
     }
 
+    // Variable global.
     &__link:focus {
         border-color: var(--border-color-link-focus);
     }
@@ -176,7 +193,7 @@
     }
 
     &__button:first-child {
-        margin-right: var(--margin-right-button-checkin);
+        margin-right: var(--margin-right-help-bar-button);
     }
 
     &__icon {
