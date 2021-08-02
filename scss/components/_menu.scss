@@ -100,7 +100,8 @@
 
 .main-nav {
 
-    left: -80vw;
+    // left: -80vw;
+    left: 0;
     display: flex;
     top: var(--height-header);
     width: var(--width-main-nav);
@@ -202,11 +203,22 @@
 }
 
 .social-bar {
-    display: flex;
-    justify-content: space-around;
-    padding: var(--padding-social-bar);
-    font-size: var(--font-size-social-bar);
     margin-top: var(--margin-top-social-bar);
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-around;
+        padding: var(--padding-social-bar);
+        font-size: var(--font-size-social-bar);
+
+        @include from(large) {
+            background-color: orange;
+        }
+
+    }
+
+
+    // flex-direction: column;
 
     a {
         color: #fff;
@@ -222,6 +234,7 @@
     a:focus {
         border-color: var(--border-color-link-focus-alt);
     }
+
 }
 
 

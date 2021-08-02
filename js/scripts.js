@@ -70,17 +70,26 @@ addEventListener('DOMContentLoaded', () => {
 
 
 
+    // Función mover la Barra Social.
     const moveSocialBar = () => {
+        const h3 = document.createElement('h3')
+        h3.textContent = 'Síguenos en redes sociales'
+        h3.id = 'social-bar__title'
+
         if (mql.matches) {
             footerContainer.insertAdjacentElement('beforeend', socialBar)
-        } else {
+            socialBar.insertAdjacentElement('afterbegin', h3)
+        } else if (socialBar.firstElementChild.id === 'social-bar__title') {
+            socialBar.firstElementChild.remove()
             nav.insertAdjacentElement('beforeend', socialBar)
         }
     }
+    // Ejecución de la función mover la Barra Social.
     moveSocialBar()
+    // Evento 'change'
     mql.addEventListener('change', moveSocialBar)
-
 })
+
 
 
 
