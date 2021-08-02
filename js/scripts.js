@@ -1,7 +1,6 @@
 addEventListener('DOMContentLoaded', () => {
 
-    const   header = document.getElementById('main-header'),
-            burguerButton = document.querySelector('.burguer-button'),
+    const   burguerButton = document.querySelector('.burguer-button'),
             burguerLine = document.querySelector('.burguer-button__line'),
             nav = document.getElementById('main-nav'),
             iconCheckin = document.getElementById('checkin'),
@@ -23,7 +22,7 @@ addEventListener('DOMContentLoaded', () => {
 
 
 
-    // Función change icons.
+    // Función change icons del Header.
     const changeIcons = () => {
         if (mql.matches) {
             iconCheckin.src = "img/icons/checkin-desk.svg"
@@ -43,22 +42,22 @@ addEventListener('DOMContentLoaded', () => {
     // Función Altura Elemento.
     elementHeight = () => {
         // Altura interna del viewport.
-        vh = innerHeight
-        // Leyendo la variable CSS '--height-header' con JavaScript.
-        heightHeader = getComputedStyle(document.documentElement).getPropertyValue('--height-header')
-        // Leyendo la variable CSS '--height-footer' con JavaScript.
-        heightFooter = getComputedStyle(document.documentElement).getPropertyValue('--height-footer')
-        // Almacenando altura mínima del main en mainHeight.
-        mainHeight = `min-height: calc(${vh/16}rem - ${heightHeader} - ${heightFooter})`
-        // Aplicando el estilo (min-height) a main
-        main.setAttribute('style', mainHeight)
+        const vh = innerHeight
+        // Leyendo y asignando la variable CSS '--height-header' con JavaScript.
+        const heightHeader = getComputedStyle(document.documentElement).getPropertyValue('--height-header')
+        // Leyendo y asignando la variable CSS '--height-footer' con JavaScript.
+        const heightFooter = getComputedStyle(document.documentElement).getPropertyValue('--height-footer')
+        // Calculando altura mínima del main.
+        const minHeightMain = `min-height: calc(${vh/16}rem - ${heightHeader} - ${heightFooter})`
+        // Asignando 'min-height' a main
+        main.setAttribute('style', minHeightMain)
 
+        // Calculando la altura del NAV
         if (mql.matches) {
-            navHeight = `height: auto`
+            const navHeight = `height: auto`
             nav.setAttribute('style', navHeight)
         } else {
-            vh = innerHeight
-            navHeight = `height: calc(${vh/16}rem - ${heightHeader})`
+            const navHeight = `height: calc(${vh/16}rem - ${heightHeader})`
             nav.setAttribute('style', navHeight)
         }
     }
