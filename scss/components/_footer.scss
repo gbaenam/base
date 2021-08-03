@@ -1,22 +1,18 @@
 .main-footer {
     background-color: #2e5dd8;
-    height: var(--height-footer);
+    // height: var(--height-footer);
 
-    &__container {
-        line-height: var(--height-footer);
+    // &__container {
+    //     height: 100%;
+    // }
 
-        @include from(large) {
-            line-height:unset;
-        }
-    }
+    // &__title {
+    //     color: #fff;
+    //     text-align: center;
 
-    &__title {
-        color: #fff;
-        text-align: center;
-
-        @include from(large) {
-            margin-bottom: 30px;
-        }
-    }
+    //     @include from(large) {
+    //         margin-bottom: 30px;
+    //     }
+    // }
 
 }

@@ -46,16 +46,15 @@ addEventListener('DOMContentLoaded', () => {
         // Leyendo y asignando la variable CSS '--height-header' con JavaScript.
         const heightHeader = getComputedStyle(document.documentElement).getPropertyValue('--height-header')
         // Leyendo y asignando la variable CSS '--height-footer' con JavaScript.
-        const heightFooter = getComputedStyle(document.documentElement).getPropertyValue('--height-footer')
+        // const heightFooter = getComputedStyle(document.documentElement).getPropertyValue('--height-footer')
         // Calculando altura mínima del main.
-        const minHeightMain = `min-height: calc(${vh/16}rem - ${heightHeader} - ${heightFooter})`
+        // const minHeightMain = `min-height: calc(${vh/16}rem - ${heightHeader} - ${heightFooter})`
         // Asignando 'min-height' a main
-        main.setAttribute('style', minHeightMain)
+        // main.setAttribute('style', minHeightMain)
 
         // Calculando la altura del NAV
         if (mql.matches) {
-            const navHeight = `height: auto`
-            nav.setAttribute('style', navHeight)
+            nav.style.height = 'auto'
         } else {
             const navHeight = `height: calc(${vh/16}rem - ${heightHeader})`
             nav.setAttribute('style', navHeight)
@@ -64,22 +63,24 @@ addEventListener('DOMContentLoaded', () => {
     // Ejecución de la función Altura Elemento.
     elementHeight()
     // Evento 'change' consulta de medios función Altura Elemento.
-    mql.addEventListener('change', elementHeight)
+    // mql.addEventListener('change', elementHeight)
     // Evento 'resize' función Altura Elemento.
     addEventListener('resize', elementHeight)
 
 
 
+    // Creación elemento 'h3' de socialBar.
+    const h3 = document.createElement('h3')
+    h3.textContent = 'Síguenos en redes sociales'
+    h3.classList.add('social-bar__title')
+    h3.id = 'bar-text'
+
     // Función mover la Barra Social.
     const moveSocialBar = () => {
-        const h3 = document.createElement('h3')
-        h3.textContent = 'Síguenos en redes sociales'
-        h3.id = 'social-bar__title'
-
         if (mql.matches) {
-            footerContainer.insertAdjacentElement('beforeend', socialBar)
+            footerContainer.insertAdjacentElement('afterbegin', socialBar)
             socialBar.insertAdjacentElement('afterbegin', h3)
-        } else if (socialBar.firstElementChild.id === 'social-bar__title') {
+        } else if (socialBar.firstElementChild.id === 'bar-text') {
             socialBar.firstElementChild.remove()
             nav.insertAdjacentElement('beforeend', socialBar)
         }

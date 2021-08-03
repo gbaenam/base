@@ -30,12 +30,12 @@ $breakpoints: (
     --min-width: 320px;
     --max-width: 1430px;
 
-    --height-footer: 5rem;
+    // --height-footer: 5rem;
 
     // Wide 1024px
-    @include from(large) {
-        --height-footer: 10rem;
-    }
+    // @include from(large) {
+    //     --height-footer: 10rem;
+    // }
 }
 
 
