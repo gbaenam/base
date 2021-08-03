@@ -1,6 +1,7 @@
 addEventListener('DOMContentLoaded', () => {
 
-    const   burguerButton = document.querySelector('.burguer-button'),
+    const   mainHeader = document.getElementById('main-header'),
+            burguerButton = document.querySelector('.burguer-button'),
             burguerLine = document.querySelector('.burguer-button__line'),
             nav = document.getElementById('main-nav'),
             iconCheckin = document.getElementById('checkin'),
