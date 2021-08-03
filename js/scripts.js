@@ -43,7 +43,7 @@ elementHeight = () => {
     // Altura interna del viewport.
     const vh = innerHeight
     // Leyendo y asignando la variable CSS '--height-header' con JavaScript.
-    const heightHeader = getComputedStyle(document.documentElement).getPropertyValue('--height-header')
+    const heightHeader = getComputedStyle(mainHeader).getPropertyValue('--height-header')
     // Leyendo y asignando la variable CSS '--height-footer' con JavaScript.
     // const heightFooter = getComputedStyle(document.documentElement).getPropertyValue('--height-footer')
     // Calculando altura mínima del main.
