@@ -1,13 +1,25 @@
-const   mainHeader = document.getElementById('main-header'),
-        burguerButton = document.querySelector('.burguer-button'),
-        burguerLine = document.querySelector('.burguer-button__line'),
+// Captura de elementos principales.
+const   header = document.getElementById('main-header'),
         nav = document.getElementById('main-nav'),
+        main = document.getElementById('main'),
+        footer = document.getElementById('main-footer')
+
+
+// Captura de elementos secundarios.
+const   burguerButton = document.querySelector('.burguer-button'),
+        burguerLine = document.querySelector('.burguer-button__line'),
         iconCheckin = document.getElementById('checkin'),
         iconContact = document.getElementById('contact'),
         socialBar = document.getElementById('social-bar'),
-        main = document.getElementById('main'),
-        footerContainer = document.getElementById('footer-container'),
-        mql = matchMedia('(min-width: 1024px)')
+        footerContainer = document.getElementById('footer-container')
+
+
+// Consulta de medios.
+const mql = matchMedia('(min-width: 1024px)')
+
+
+// Leyendo y asignando la variable CSS '--height-header' con JavaScript.
+const heightHeader = getComputedStyle(header).getPropertyValue('--height-header')
 
 
 
@@ -42,14 +54,6 @@ mql.addEventListener('change', changeIcons)
 elementHeight = () => {
     // Altura interna del viewport.
     const vh = innerHeight
-    // Leyendo y asignando la variable CSS '--height-header' con JavaScript.
-    const heightHeader = getComputedStyle(mainHeader).getPropertyValue('--height-header')
-    // Leyendo y asignando la variable CSS '--height-footer' con JavaScript.
-    // const heightFooter = getComputedStyle(document.documentElement).getPropertyValue('--height-footer')
-    // Calculando altura mínima del main.
-    // const minHeightMain = `min-height: calc(${vh/16}rem - ${heightHeader} - ${heightFooter})`
-    // Asignando 'min-height' a main
-    // main.setAttribute('style', minHeightMain)
 
     // Calculando la altura del NAV
     if (mql.matches) {
@@ -61,8 +65,6 @@ elementHeight = () => {
 }
 // Ejecución de la función Altura Elemento.
 elementHeight()
-// Evento 'change' consulta de medios función Altura Elemento.
-// mql.addEventListener('change', elementHeight)
 // Evento 'resize' función Altura Elemento.
 addEventListener('resize', elementHeight)
 
@@ -88,9 +90,24 @@ const moveSocialBar = () => {
 moveSocialBar()
 // Evento 'change'
 mql.addEventListener('change', moveSocialBar)
-// })
 
 
+
+const alturaMain = () => {
+    const vh = innerHeight
+    const heightFooter = footer.getBoundingClientRect().height
+
+    if(mql.matches) {
+        const mainHeight = `height: calc(${vh/16}rem - ${heightHeader} - ${heightFooter/16}rem)`
+        main.setAttribute('style', mainHeight)
+    } else {
+        const mainHeight = `height: calc(${vh/16}rem - ${heightHeader} - ${heightFooter/16}rem)`
+        main.setAttribute('style', mainHeight)
+    }
+}
+
+alturaMain()
+addEventListener('resize', alturaMain)
 
 
 
@@ -100,4 +117,3 @@ mql.addEventListener('change', moveSocialBar)
 //     border-radius: ${br};
 //     font-size: ${hdr};
 // `
-
