@@ -18,7 +18,7 @@
   --font-size-body: 1.25rem;
   --color-body: rgb(30, 63, 63);
   --font-family-body: 'Bitter', serif;
-  --background-color-body: lightgrey;
+  --background-color-body: #f5f8ff;
   --font-family-body-alt:'Roboto', sans-serif; }
   @media screen and (min-width: 540px) {
     :root {
