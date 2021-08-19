@@ -288,13 +288,19 @@ ul {
 
 .social-bar {
   --margin-top-social-bar: auto;
+  --padding-wrapper: 1rem 0 1.2rem;
   --font-size-icons: 1.6rem; }
   @media screen and (min-width: 540px) {
     .social-bar {
+      --padding-wrapper: 1rem 1rem 1.2rem;
       --font-size-icons: 1.8rem; } }
+  @media screen and (min-width: 960px) {
+    .social-bar {
+      --padding-wrapper: 1rem 5rem 1.2rem; } }
   @media screen and (min-width: 1024px) {
     .social-bar {
       --margin-top-social-bar: 0;
+      --padding-wrapper: 2rem 10rem;
       --color-title: #fff;
       --font-size-title: 2.625rem;
       --margin-bottom-title: 2rem;
@@ -303,9 +309,15 @@ ul {
       --height-social-bar-a: 3.125rem;
       --align-items-social-bar-a: center;
       --justify-content-social-bar-a: center; } }
+  @media screen and (min-width: 1280px) {
+    .social-bar {
+      --padding-wrapper: 2rem 15rem; } }
+  @media screen and (min-width: 1440px) {
+    .social-bar {
+      --padding-wrapper: 2rem 20rem; } }
 
 .main-nav {
-  left: 0;
+  left: -80vw;
   display: flex;
   top: var(--height-header);
   width: var(--width-main-nav);
@@ -369,22 +381,7 @@ ul {
     .social-bar {
       background-color: #2e5dd8; } }
   .social-bar__wrapper {
-    padding: 1rem 0 1.2rem; }
-    @media screen and (min-width: 540px) {
-      .social-bar__wrapper {
-        padding: 1rem 1rem 1.2rem; } }
-    @media screen and (min-width: 960px) {
-      .social-bar__wrapper {
-        padding: 1rem 5rem 1.2rem; } }
-    @media screen and (min-width: 1024px) {
-      .social-bar__wrapper {
-        padding: 2rem 10rem; } }
-    @media screen and (min-width: 1280px) {
-      .social-bar__wrapper {
-        padding: 2rem 15rem; } }
-    @media screen and (min-width: 1440px) {
-      .social-bar__wrapper {
-        padding: 2rem 20rem; } }
+    padding: var(--padding-wrapper); }
   .social-bar__title {
     color: var(--color-title);
     font-size: var(--font-size-title);
@@ -411,10 +408,7 @@ ul {
   justify-content: center; }
 
 .main-footer {
-  font-family: var(--font-family-footer);
-  text-align: center; }
+  text-align: center;
+  font-family: var(--font-family-footer); }
   .main-footer__development {
-    font-size: 16px;
-    background-color: powderblue; }
-  .main-footer__development-wrapper {
-    background-color: powderblue; }
+    font-size: 16px; }

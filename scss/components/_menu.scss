@@ -7,15 +7,12 @@
     --transition-main-nav: left .6s;
     --flex-direction-main-nav: column;
     --background-color-main-nav: #2a3b47;
-
     // menu
     --border-top-menu: .0625rem solid #11191e;
     --border-bottom-menu: .125rem solid #485761;
-
     // item
     --border-top-item: .125rem solid #485761;
     --border-bottom-item: .0625rem solid #11191e;
-
     // link
     --padding-link: .7rem;
 
@@ -29,18 +26,15 @@
         --flex-direction-main-nav: row;
         --align-items-main-nav: center;
         --background-color-main-nav: transparent;
-
         // menu
         --display-menu: flex;
         --border-top-menu: none;
         --border-bottom-menu: none;
-
         // item
         --border-top-item: none;
         --border-bottom-item: none;
         --margin-right-item: .625rem;
         --margin-right-item-last-child: 2.5rem;
-
         // link
         --padding-link: .1rem .5rem;
     }
@@ -52,16 +46,15 @@
     --order-help-bar: -1;
     --padding-help-bar: 1.2rem 1rem;
     --justify-content-help-bar: flex-end;
-
     // button
     --margin-right-help-bar-button: .8rem;
+
 
     @include from(large) {
         // help-bar
         --padding-help-bar: 0;
         --order-help-bar: unset;
         --justify-content-help-bar: unset;
-
         // button
         --padding-help-bar-button: .2rem;
         --margin-right-help-bar-button: .6rem;
@@ -72,37 +65,38 @@
 .social-bar {
     // social-bar
     --margin-top-social-bar: auto;
-
+    // wrapper
+    --padding-wrapper: 1rem 0 1.2rem;
     // icons
     --font-size-icons: 1.6rem;
-                // --padding-icons: 1rem 0 1.2rem;
+
 
     // Wide 540px
     @include from(medium) {
+        // wrapper
+        --padding-wrapper: 1rem 1rem 1.2rem;
         // icons
         --font-size-icons: 1.8rem;
-                // --padding-icons: 1rem 1rem 1.2rem;
     }
+
 
     // Wide 960px
     @include from(xxmedium) {
-        // icons
-                // --padding-icons: 1rem 5rem 1.2rem;
+        // wrapper
+        --padding-wrapper: 1rem 5rem 1.2rem;
     }
+
 
     // Wide 1024px
     @include from(large) {
         // social-bar
         --margin-top-social-bar: 0;
-
+        // wrapper
+        --padding-wrapper: 2rem 10rem;
         // title
         --color-title: #fff;
         --font-size-title: 2.625rem;
         --margin-bottom-title: 2rem;
-
-        // icons
-                // --padding-icons: 0 15rem;
-
         // wrapper a
         --display-social-bar-a: flex;
         --width-social-bar-a: 3.125rem;
@@ -110,12 +104,25 @@
         --align-items-social-bar-a: center;
         --justify-content-social-bar-a: center;
     }
+
+
+    // Wide 1280px
+    @include from(xlarge) {
+        // Wrapper
+        --padding-wrapper: 2rem 15rem;
+    }
+
+
+    // Wide 1440px
+    @include from(xxlarge) {
+        // Wrapper
+        --padding-wrapper: 2rem 20rem;
+    }
 }
 
 
 .main-nav {
-    // left: -80vw;
-    left: 0;
+    left: -80vw;
     display: flex;
     top: var(--height-header);
     width: var(--width-main-nav);
@@ -224,29 +231,7 @@
     }
 
     &__wrapper {
-        padding: 1rem 0 1.2rem;
-
-        @include from(540px) {
-            padding: 1rem 1rem 1.2rem;
-        }
-
-        @include from(960px) {
-            padding: 1rem 5rem 1.2rem;
-        }
-
-        @include from(1024px) {
-            padding: 2rem 10rem;
-        }
-
-        // 1280px
-        @include from(xlarge) {
-            padding: 2rem 15rem;
-        }
-
-        // 1440px
-        @include from(xxlarge) {
-            padding: 2rem 20rem;
-        }
+        padding: var(--padding-wrapper);
     }
 
     &__title {
@@ -258,7 +243,6 @@
     &__icons {
         display: flex;
         justify-content: space-around;
-        // padding: var(--padding-icons);
         font-size: var(--font-size-icons);
     }
 
@@ -277,5 +261,4 @@
         border-color: var(--border-color-link-focus-alt);
     }
 }
-
 

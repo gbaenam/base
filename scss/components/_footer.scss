@@ -1,16 +1,10 @@
 .main-footer {
-    // padding: 2rem;
-    // background-color: #2e5dd8;
-    font-family: var(--font-family-footer);
     text-align: center;
+    font-family: var(--font-family-footer);
 
     &__development {
         font-size: 16px;
-        background-color: powderblue;
-    }
-
-    &__development-wrapper {
-        background-color: powderblue;
+        // background-color: powderblue;
     }
 }
 
