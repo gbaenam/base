@@ -1,6 +1,6 @@
 /*------------------ MAIN NAV ----------------------*/
 .main-nav {
-    /* ---------------- nav ----------------*/
+    // nav
     --width-main-nav: 80vw;
     --position-main-nav: fixed;
     --overflow-y-main-nav: scroll;
@@ -8,21 +8,20 @@
     --flex-direction-main-nav: column;
     --background-color-main-nav: #2a3b47;
 
-    /* ------------------- menu ---------------------*/
+    // menu
     --border-top-menu: .0625rem solid #11191e;
     --border-bottom-menu: .125rem solid #485761;
 
-    /* ------------------- item ---------------------*/
+    // item
     --border-top-item: .125rem solid #485761;
     --border-bottom-item: .0625rem solid #11191e;
 
-    /* -------------- link -----------------*/
+    // link
     --padding-link: .7rem;
-    /*--------------------------------------*/
 
 
     @include from(large) {
-        /* ----------------- nav -----------------*/
+        // nav
         --width-main-nav: auto;
         --position-main-nav: static;
         --overflow-y-main-nav: auto;
@@ -31,75 +30,93 @@
         --align-items-main-nav: center;
         --background-color-main-nav: transparent;
 
-        /* ---------------- menu -----------------*/
+        // menu
         --display-menu: flex;
         --border-top-menu: none;
         --border-bottom-menu: none;
 
-        /* ----------------item ------------------*/
+        // item
         --border-top-item: none;
         --border-bottom-item: none;
         --margin-right-item: .625rem;
         --margin-right-item-last-child: 2.5rem;
 
-        /* --------------- link ------------------*/
+        // link
         --padding-link: .1rem .5rem;
-        /*----------------------------------------*/
     }
 }
 
+
 .help-bar {
+    // help-bar
     --order-help-bar: -1;
     --padding-help-bar: 1.2rem 1rem;
     --justify-content-help-bar: flex-end;
+
+    // button
     --margin-right-help-bar-button: .8rem;
-    /*-------------------------------------*/
 
     @include from(large) {
+        // help-bar
         --padding-help-bar: 0;
         --order-help-bar: unset;
-        --padding-help-bar-button: .2rem;
         --justify-content-help-bar: unset;
+
+        // button
+        --padding-help-bar-button: .2rem;
         --margin-right-help-bar-button: .6rem;
-        /*-----------------------------------*/
     }
 }
 
+
 .social-bar {
+    // social-bar
     --margin-top-social-bar: auto;
-    --font-size-social-bar: 1.6rem;
-    --padding-social-bar: 1rem 0 1.2rem;
-    /*------------------------------------*/
+
+    // wrapper
+    --font-size-wrapper: 1.6rem;
+    --padding-wrapper: 1rem 0 1.2rem;
 
     // Wide 540px
     @include from(medium) {
-        --font-size-social-bar: 1.8rem;
-        --padding-social-bar: 1rem 1rem 1.2rem;
-        /*------------------------------------*/
+        // wrapper
+        --font-size-wrapper: 1.8rem;
+        --padding-wrapper: 1rem 1rem 1.2rem;
     }
 
     // Wide 960px
     @include from(xxmedium) {
-        --padding-social-bar: 1rem 5rem 1.2rem;
-        /*---------------------------------------*/
+        // wrapper
+        --padding-wrapper: 1rem 5rem 1.2rem;
     }
 
     // Wide 1024px
     @include from(large) {
+        // social-bar
         --margin-top-social-bar: 0;
-        --padding-social-bar: 0rem 20rem;
+        --display-social-bar: flex;
+        --text-align-social-bar: center;
+        --flex-direction-social-bar: column;
+
+        // title
+        --color-title: #fff;
+        --font-size-title: 2.625rem;
+        --margin-bottom-title: 2rem;
+
+        // wrapper
+        --padding-wrapper: 0rem 20rem;
+
+        // wrapper a
+        --display-social-bar-a: flex;
         --width-social-bar-a: 3.125rem;
         --height-social-bar-a: 3.125rem;
-        --display-social-bar-a: flex;
         --align-items-social-bar-a: center;
         --justify-content-social-bar-a: center;
-        /*----------------------------------------*/
     }
 }
 
 
 .main-nav {
-
     left: -80vw;
     display: flex;
     top: var(--height-header);
@@ -110,7 +127,6 @@
     align-items: var(--align-items-main-nav);
     flex-direction: var(--flex-direction-main-nav);
     background-color: var(--background-color-main-nav);
-
 
     &__move {
         left: 0;
@@ -175,8 +191,8 @@
     }
 }
 
-.help-bar {
 
+.help-bar {
     display: flex;
     order: var(--order-help-bar);
     padding: var(--padding-help-bar);
@@ -201,31 +217,24 @@
     }
 }
 
-.social-bar {
-    margin-top: var(--margin-top-social-bar);
 
-    @include from(large) {
-        height: 100%;
-        display: flex;
-        text-align: center;
-        flex-direction: column;
-        justify-content: center;
-    }
+.social-bar {
+    display: var(--display-social-bar);
+    text-align: var(--text-align-social-bar);
+    margin-top: var(--margin-top-social-bar);
+    flex-direction: var(--flex-direction-social-bar);
 
     &__title {
-
-        @include from(large) {
-            color: #fff;
-            margin-bottom: 2rem;
-            font-size: 2rem;
-        }
+        color: var(--color-title);
+        font-size: var(--font-size-title);
+        margin-bottom: var(--margin-bottom-title);
     }
 
     &__wrapper {
         display: flex;
         justify-content: space-around;
-        padding: var(--padding-social-bar);
-        font-size: var(--font-size-social-bar);
+        padding: var(--padding-wrapper);
+        font-size: var(--font-size-wrapper);
     }
 
     a {

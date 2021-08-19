@@ -29,22 +29,8 @@ $breakpoints: (
 :root {
     --min-width: 320px;
     --max-width: 1430px;
-
-    // --height-footer: 5rem;
-
-    // Wide 1024px
-    // @include from(large) {
-    //     --height-footer: 10rem;
-    // }
 }
 
-
-// Familia de fuentes.
-:root {
-
-    // Font Family footer
-    --font-family-footer: 'Lato', sans-serif;
-}
 
 // Variables y estilos para body
 :root {
@@ -65,7 +51,7 @@ $breakpoints: (
 :root {
     --width-logo: 2.8rem;
     --height-header: 3.8rem;
-    --background-color-header:#fff;
+    --background-color-header: #fff;
 
     // Website title.
     --color-site-title: #6a7477;
@@ -104,6 +90,11 @@ $breakpoints: (
     --color-togle-button-alt: #094293;
 }
 
+// Variables y estilos para footer
+:root {
+    --font-family-footer: 'Lato', sans-serif;
+}
+
 
 // Tamaños de fuentes.
 :root {
@@ -122,7 +113,7 @@ $breakpoints: (
     }
 }
 
-// Variables para los enlaces <a></a>
+// Variables para los enlaces.
 :root {
 
     @include from(large) {

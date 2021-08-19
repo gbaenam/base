@@ -72,7 +72,7 @@ addEventListener('resize', elementHeight)
 
 // Creación elemento 'h3' de socialBar.
 const h3 = document.createElement('h3')
-h3.textContent = 'Síguenos en redes sociales'
+h3.textContent = '¡Síguenos en redes sociales!'
 h3.classList.add('social-bar__title')
 h3.id = 'bar-text'
 
