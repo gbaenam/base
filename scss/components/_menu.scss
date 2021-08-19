@@ -75,19 +75,19 @@
 
     // icons
     --font-size-icons: 1.6rem;
-    --padding-icons: 1rem 0 1.2rem;
+                // --padding-icons: 1rem 0 1.2rem;
 
     // Wide 540px
     @include from(medium) {
         // icons
         --font-size-icons: 1.8rem;
-        --padding-icons: 1rem 1rem 1.2rem;
+                // --padding-icons: 1rem 1rem 1.2rem;
     }
 
     // Wide 960px
     @include from(xxmedium) {
         // icons
-        --padding-icons: 1rem 5rem 1.2rem;
+                // --padding-icons: 1rem 5rem 1.2rem;
     }
 
     // Wide 1024px
@@ -101,7 +101,7 @@
         --margin-bottom-title: 2rem;
 
         // icons
-        --padding-icons: 0 15rem;
+                // --padding-icons: 0 15rem;
 
         // wrapper a
         --display-social-bar-a: flex;
@@ -114,7 +114,8 @@
 
 
 .main-nav {
-    left: -80vw;
+    // left: -80vw;
+    left: 0;
     display: flex;
     top: var(--height-header);
     width: var(--width-main-nav);
@@ -222,6 +223,32 @@
         background-color: #2e5dd8;
     }
 
+    &__wrapper {
+        padding: 1rem 0 1.2rem;
+
+        @include from(540px) {
+            padding: 1rem 1rem 1.2rem;
+        }
+
+        @include from(960px) {
+            padding: 1rem 5rem 1.2rem;
+        }
+
+        @include from(1024px) {
+            padding: 2rem 10rem;
+        }
+
+        // 1280px
+        @include from(xlarge) {
+            padding: 2rem 15rem;
+        }
+
+        // 1440px
+        @include from(xxlarge) {
+            padding: 2rem 20rem;
+        }
+    }
+
     &__title {
         color: var(--color-title);
         font-size: var(--font-size-title);
@@ -231,7 +258,7 @@
     &__icons {
         display: flex;
         justify-content: space-around;
-        padding: var(--padding-icons);
+        // padding: var(--padding-icons);
         font-size: var(--font-size-icons);
     }
 
