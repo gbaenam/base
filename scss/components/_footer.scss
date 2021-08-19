@@ -1,7 +1,13 @@
 .main-footer {
-    padding: 2rem;
+    // padding: 2rem;
     background-color: #2e5dd8;
     font-family: var(--font-family-footer);
+    text-align: center;
+
+    &__development {
+        font-size: 16px;
+        background-color: #fff;
+    }
 }
 
 

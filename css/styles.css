@@ -365,7 +365,6 @@ ul {
 
 .social-bar {
   display: var(--display-social-bar);
-  text-align: var(--text-align-social-bar);
   margin-top: var(--margin-top-social-bar);
   flex-direction: var(--flex-direction-social-bar); }
   .social-bar__title {
@@ -395,6 +394,9 @@ ul {
   justify-content: center; }
 
 .main-footer {
-  padding: 2rem;
   background-color: #2e5dd8;
-  font-family: var(--font-family-footer); }
+  font-family: var(--font-family-footer);
+  text-align: center; }
+  .main-footer__development {
+    font-size: 16px;
+    background-color: #fff; }
