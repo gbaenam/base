@@ -11,7 +11,7 @@ const   burguerButton = document.querySelector('.burguer-button'),
         iconCheckin = document.getElementById('checkin'),
         iconContact = document.getElementById('contact'),
         socialBar = document.getElementById('social-bar'),
-        footerContainer = document.getElementById('footer-container')
+        socialBarWrapper = document.getElementById('social-bar-wrapper')
 
 
 // Consulta de medios.
@@ -79,10 +79,10 @@ h3.id = 'bar-text'
 // Función mover la Barra Social.
 const moveSocialBar = () => {
     if (mql.matches) {
-        footerContainer.insertAdjacentElement('afterbegin', socialBar)
-        socialBar.insertAdjacentElement('afterbegin', h3)
-    } else if (socialBar.firstElementChild.id === 'bar-text') {
-        socialBar.firstElementChild.remove()
+        footer.insertAdjacentElement('afterbegin', socialBar)
+        socialBarWrapper.insertAdjacentElement('afterbegin', h3)
+    } else if (socialBarWrapper.firstElementChild.id === 'bar-text') {
+        socialBarWrapper.firstElementChild.remove()
         nav.insertAdjacentElement('beforeend', socialBar)
     }
 }

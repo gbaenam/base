@@ -1,5 +1,4 @@
-.main-header__layout,
-.main-footer__layout {
+.main-header__layout {
     height: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -35,12 +34,15 @@
     }
 }
 
+.social-bar__layout {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: var(--max-width);
 
+}
 
-// .main-footer__layout {
-//     @include from(large) {
-//         padding: 2rem 0;
-//     }
-// }
-
-
+.main-footer__layout {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: var(--max-width);
+}

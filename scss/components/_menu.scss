@@ -73,38 +73,35 @@
     // social-bar
     --margin-top-social-bar: auto;
 
-    // wrapper
-    --font-size-wrapper: 1.6rem;
-    --padding-wrapper: 1rem 0 1.2rem;
+    // icons
+    --font-size-icons: 1.6rem;
+    --padding-icons: 1rem 0 1.2rem;
 
     // Wide 540px
     @include from(medium) {
-        // wrapper
-        --font-size-wrapper: 1.8rem;
-        --padding-wrapper: 1rem 1rem 1.2rem;
+        // icons
+        --font-size-icons: 1.8rem;
+        --padding-icons: 1rem 1rem 1.2rem;
     }
 
     // Wide 960px
     @include from(xxmedium) {
-        // wrapper
-        --padding-wrapper: 1rem 5rem 1.2rem;
+        // icons
+        --padding-icons: 1rem 5rem 1.2rem;
     }
 
     // Wide 1024px
     @include from(large) {
         // social-bar
         --margin-top-social-bar: 0;
-        --display-social-bar: flex;
-        --text-align-social-bar: center;
-        --flex-direction-social-bar: column;
 
         // title
         --color-title: #fff;
         --font-size-title: 2.625rem;
         --margin-bottom-title: 2rem;
 
-        // wrapper
-        --padding-wrapper: 0rem 20rem;
+        // icons
+        --padding-icons: 0 15rem;
 
         // wrapper a
         --display-social-bar-a: flex;
@@ -219,10 +216,11 @@
 
 
 .social-bar {
-    display: var(--display-social-bar);
-    // text-align: var(--text-align-social-bar);
     margin-top: var(--margin-top-social-bar);
-    flex-direction: var(--flex-direction-social-bar);
+
+    @include from(large) {
+        background-color: #2e5dd8;
+    }
 
     &__title {
         color: var(--color-title);
@@ -230,11 +228,11 @@
         margin-bottom: var(--margin-bottom-title);
     }
 
-    &__wrapper {
+    &__icons {
         display: flex;
         justify-content: space-around;
-        padding: var(--padding-wrapper);
-        font-size: var(--font-size-wrapper);
+        padding: var(--padding-icons);
+        font-size: var(--font-size-icons);
     }
 
     a {
