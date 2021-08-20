@@ -433,12 +433,14 @@ ul {
     display: flex;
     width: 12.5rem;
     color: #4b4b4b;
+    font-size: 1.1rem;
     margin-left: auto;
     margin-right: auto;
+    align-items: center;
     background-color: #c2c2c2;
     border: .0625rem solid #eee; }
     .main-footer__country img {
       width: 4.375rem;
       height: 1.875rem;
-      margin-right: 1.6875rem;
+      margin-right: 1.5rem;
       border-right: .0625rem solid #eee; }
