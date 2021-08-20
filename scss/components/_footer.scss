@@ -3,8 +3,39 @@
     font-family: var(--font-family-footer);
 
     &__development {
-        font-size: 16px;
-        // background-color: powderblue;
+        color: #fff;
+        font-size: 1rem;
+        background-color: #2e5dd8;
+    }
+
+    &__wrapper {
+        padding: 1rem 0;
+
+        p {
+            margin-bottom: .8rem;
+            line-height: 130%;
+        }
+    }
+
+    &__wrapper :nth-child(3) {
+        margin-bottom: 2rem;
+    }
+
+    &__country {
+        display: flex;
+        width: 12.5rem;
+        color: #4b4b4b;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: #c2c2c2;
+        border: .0625rem solid #eee;
+
+        img {
+            width: 4.375rem;
+            height: 1.875rem;
+            margin-right: 1.6875rem;
+            border-right: .0625rem solid #eee;
+        }
     }
 }
 

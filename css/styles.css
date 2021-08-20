@@ -131,6 +131,19 @@ ul {
   margin-bottom: 0;
   list-style: none; }
 
+.line-break412::before,
+.line-break1200::before {
+  display: block;
+  content: ""; }
+
+@media screen and (min-width: 412px) {
+  .line-break412::before {
+    display: inline; } }
+
+@media screen and (min-width: 1200px) {
+  .line-break1200::before {
+    display: inline; } }
+
 .main-header__layout {
   height: 100%;
   margin-left: auto;
@@ -156,11 +169,7 @@ ul {
     .main-header__layout {
       padding: 0; } }
 
-.social-bar-layout {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: var(--max-width); }
-
+.social-bar-layout,
 .main-footer-layout {
   margin-left: auto;
   margin-right: auto;
@@ -300,6 +309,7 @@ ul {
   @media screen and (min-width: 1024px) {
     .social-bar {
       --margin-top-social-bar: 0;
+      --background-color-social-bar:  #5396f0;
       --padding-wrapper: 2rem 10rem;
       --color-title: #fff;
       --font-size-title: 2.625rem;
@@ -376,10 +386,8 @@ ul {
     width: 2.8rem; }
 
 .social-bar {
-  margin-top: var(--margin-top-social-bar); }
-  @media screen and (min-width: 1024px) {
-    .social-bar {
-      background-color: #2e5dd8; } }
+  margin-top: var(--margin-top-social-bar);
+  background-color: var(--background-color-social-bar); }
   .social-bar__wrapper {
     padding: var(--padding-wrapper); }
   .social-bar__title {
@@ -411,4 +419,26 @@ ul {
   text-align: center;
   font-family: var(--font-family-footer); }
   .main-footer__development {
-    font-size: 16px; }
+    color: #fff;
+    font-size: 1rem;
+    background-color: #2e5dd8; }
+  .main-footer__wrapper {
+    padding: 1rem 0; }
+    .main-footer__wrapper p {
+      margin-bottom: .8rem;
+      line-height: 130%; }
+  .main-footer__wrapper :nth-child(3) {
+    margin-bottom: 2rem; }
+  .main-footer__country {
+    display: flex;
+    width: 12.5rem;
+    color: #4b4b4b;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #c2c2c2;
+    border: .0625rem solid #eee; }
+    .main-footer__country img {
+      width: 4.375rem;
+      height: 1.875rem;
+      margin-right: 1.6875rem;
+      border-right: .0625rem solid #eee; }
